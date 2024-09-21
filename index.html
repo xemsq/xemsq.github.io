@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>XemSQ</title>
+    <style>
+        body {
+            background-color: #262835;
+            color: white;
+            font-family: 'Uni Sans Serif', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #2D324D;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+        p {
+            font-size: 18px;
+            margin: 0;
+            color: #5F5F94;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="randomSentence"></h1>
+        <hr>
+        <p>Now drop the card somewhere for someone else to find 👀</p>
+    </div>
+    <script>
+        const sentences = [
+            "The QR code you scanned is just as awesome as you :)"
+        ];
+
+        function getRandomSentence() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            return sentences[randomIndex];
+        }
+
+        document.getElementById('randomSentence').innerText = getRandomSentence();
+    </script>
+</body>
+</html>
